@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tapsirma</title>
+
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        p, li {
+            font-family: Arial;
+        }
+        .heart {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        Menin <i class="fa-solid fa-heart heart"></i> tagamlarim
+    </p>
+
+    <ul>
+        <li>manti</li>
+        <li>quwrtaq</li>
+        <li>tawiq sorpa</li>
+    </ul>
+
+</body>
+</html>
