@@ -65,7 +65,7 @@
     <h3>3. Qulpinay</h3>
     <img src="qulpinay.jpg" width="150px" alt="Qulpinay">
     <p><b>Tovar:</b> Qulpinay</p>
-    <p><b>Baha:</b> 30 000 sum</p>
+    <p><b>Baha:</b> 35 000 sum</p>
 
    
     <h3>4. Dizim</h3>
@@ -142,12 +142,13 @@
 </head>
 <body>
 
-    <h1>Salom Azamat 👋</h1>
+    <h1>Salom 👋</h1>
     <p>Bu mening HTML va CSS saytim</p>
     <button>Bos!</button>
 
 </body>
 </html>
+
 
 <!DOCTYPE html>
 <html lang="uz">
@@ -184,6 +185,8 @@
        <p>4. SHabdal</p>
     </body>
     </html>
+
+
 <!DOCTYPE html>
 <html lang="kk">
 <head>
@@ -252,5 +255,76 @@
         </ul>
     </li>
 </ol>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>5 Minut Timer</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+            background: #111;
+            color: #fff;
+        }
+        #time {
+            font-size: 60px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⏱️ 5 Minut Timer</h1>
+    <div id="time">05:00</div>
+
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        let time = 300; // 5 minut = 300 sekund
+        let timer;
+
+        function updateDisplay() {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            document.getElementById("time").innerText =
+                (minutes < 10 ? "0" : "") + minutes + ":" +
+                (seconds < 10 ? "0" : "") + seconds;
+        }
+
+        function startTimer() {
+            if (timer) return;
+            timer = setInterval(() => {
+                if (time > 0) {
+                    time--;
+                    updateDisplay();
+                } else {
+                    clearInterval(timer);
+                    alert("⏰ Vaqt tugadi!");
+                }
+            }, 1000);
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = null;
+            time = 300;
+            updateDisplay();
+        }
+
+        updateDisplay();
+    </script>
+
 </body>
 </html>
